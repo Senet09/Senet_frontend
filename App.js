@@ -45,7 +45,11 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <StackNavigator />
+      <StackNavigator
+
+      
+      />
+  
     </NavigationContainer>
   );
 };

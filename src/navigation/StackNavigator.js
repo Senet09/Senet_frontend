@@ -12,7 +12,6 @@ import {createStackNavigator} from '@react-navigation/stack';
 import SplashScreen from '../screens/SplashScreen.js';
 import LoginScreen from '../screens/LoginScreen.js';
 import RegisterScreen from '../screens/RegisterScreen.js';
-import DrawerNavigatorRoutes from '../components/DrawerNavigationRoutes.js';
 import HomeScreen from '../components/HomeScreen.js';
 import FeedScreen from '../screens/FeedScreen.js';
 import ProfileScreen from '../screens/ProfileScreen.js';
@@ -21,36 +20,29 @@ import PasswordChangeScreen from '../components/PasswordChange.js';
 import Gpt3Page from '../components/GptScreen.js';
 import PostUpload from '../components/PostUpload.js';
 import PostUploadText from '../components/PostUploadText.js';
-import TabNavigator from './TabNavigator.js';
-import DrawerNavigator from './DrawerNavigator.js';
 import ProfileInfoUpdate from '../components/ProfileInfoUpdate.js';
 import ChatScreen from '../screens/ChatScreen.js';
 import MessagesScreen from '../screens/MessageScreen.js';
 import SettingsScreen from '../screens/SettingsScreen.js';
+import Feed from '../screens/FeedScreen.js';
+import LoginSc from '../screens/Login.js';
+import TabNavigator from './TabNavigator.js';
+import Signup1 from '../screens/SignUp1.js';
 const Stack = createStackNavigator();
 //const Tab = createBottomTabNavigator();
 const Auth = () => {
   // Stack Navigator for Login and Sign up Screen
   return (
-    <Stack.Navigator initialRouteName="LoginScreen">
+    <Stack.Navigator initialRouteName="LoginSc">
       <Stack.Screen
-        name="LoginScreen"
-        component={LoginScreen}
+        name="LoginSc"
+        component={LoginSc}
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="RegisterScreen"
-        component={RegisterScreen}
-        options={{
-          title: 'Register', //Set Header Title
-          headerStyle: {
-            backgroundColor: '#307ecc', //Set Header color
-          },
-          headerTintColor: '#fff', //Set Header text color
-          headerTitleStyle: {
-            fontWeight: 'bold', //Set Header text style
-          },
-        }}
+        name="Signup1"
+        component={Signup1}
+       options={{headerShown: false}}
       />
     </Stack.Navigator>
   );
@@ -72,32 +64,23 @@ const StackNavigator = () => {
         component={Auth}
         options={{headerShown: false}}
       />
-      {/* Navigation Drawer as a landing page */}
       <Stack.Screen
-        name="DrawerNavigationRoutes"
-        component={DrawerNavigatorRoutes}
-        // Hiding header for Navigation Drawer
+        name="TabNavigator"
+        component={TabNavigator}
         options={{headerShown: false}}
       />
+      {/* Navigation Drawer as a landing page */}
+      <Stack.Screen name="Feed" 
+      component={Feed} />
       <Stack.Screen
         name="HomeScreen"
         component={HomeScreen}
         // Hiding header for Navigation Drawer
         options={{headerShown: false}}
       />
-      <Stack.Screen
-        name="FeedScreen"
-        component={FeedScreen}
-        // Hiding header for Navigation Drawer
-        options={{headerShown: false}}
-      />
+   
 
-      <Stack.Screen
-        name="ProfileScreen"
-        component={ProfileScreen}
-        // Hiding header for Navigation Drawer
-        options={{headerShown: false}}
-      />
+    
       <Stack.Screen
         name="CommunityList"
         component={CommunityList}
@@ -122,25 +105,9 @@ const StackNavigator = () => {
         // Hiding header for Navigation Drawer
         options={{headerShown: false}}
       />
-      <Stack.Screen
-        name="PostUploadText"
-        component={PostUploadText}
-        // Hiding header for Navigation Drawer
-        options={{headerShown: false}}
-      />
+  
 
-      <Stack.Screen
-        name="TabNavigator"
-        component={TabNavigator}
-        // Hiding header for Navigation Drawer
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="DrawerNavigator"
-        component={DrawerNavigator}
-        // Hiding header for Navigation Drawer
-        options={{headerShown: false}}
-      />
+  
       <Stack.Screen
         name="ProfileInfoUpdate"
         component={ProfileInfoUpdate}

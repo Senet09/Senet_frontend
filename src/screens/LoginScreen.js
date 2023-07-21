@@ -86,18 +86,20 @@ const LoginScreen = ({navigation}) => {
         }}>
         <View>
           <KeyboardAvoidingView enabled>
-            <View style={{alignItems: 'center'}}>
-              {/* <Image
-                source={require('../Image/aboutreact.png')}
-                style={{
-                  width: '50%',
-                  height: 100,
-                  resizeMode: 'contain',
-                  margin: 30,
-                }}
-              /> */}
+            <View style={{
+        
+                justifyContent: 'center',
+                alignItems: 'flex-start',
+      marginLeft: 35,
+            
+          }}>
+             <Text style={styles.logintext}>
+              Login
+             </Text>
             </View>
             <View style={styles.SectionStyle}>
+             
+            
               <TextInput
                 style={styles.inputStyle}
                 onChangeText={userName => setUserName(userName)}
@@ -106,14 +108,14 @@ const LoginScreen = ({navigation}) => {
                 autoCapitalize="none"
                 keyboardType="email-address"
                 returnKeyType="next"
-                onSubmitEditing={() =>
+                onSubmitEditing={() =>  
                   passwordInputRef.current && passwordInputRef.current.focus()
                 }
                 underlineColorAndroid="#f000"
                 blurOnSubmit={false}
               />
             </View>
-            <View style={styles.SectionStyle}>
+        <View style={styles.SectionStyle}> 
               <TextInput
                 style={styles.inputStyle}
                 onChangeText={UserPassword => setUserPassword(UserPassword)}
@@ -127,7 +129,7 @@ const LoginScreen = ({navigation}) => {
                 underlineColorAndroid="#f000"
                 returnKeyType="next"
               />
-            </View>
+         </View> 
             {errortext != '' ? (
               <Text style={styles.errorTextStyle}>{errortext}</Text>
             ) : null}
@@ -163,6 +165,15 @@ const LoginScreen = ({navigation}) => {
 export default LoginScreen;
 
 const styles = StyleSheet.create({
+  logintext: {
+    fontFamily: 'Gilroy',
+    fontSize: 28,
+    fontStyle: 'normal',
+    fontWeight: '600',
+    lineHeight: 40,
+    color: '#312E49',
+    
+  },
   mainBody: {
     flex: 1,
     justifyContent: 'center',
@@ -170,12 +181,13 @@ const styles = StyleSheet.create({
     alignContent: 'center',
   },
   SectionStyle: {
-    flexDirection: 'row',
+   flexDirection: 'row',
     height: 40,
     marginTop: 20,
     marginLeft: 35,
     marginRight: 35,
     margin: 10,
+
   },
   buttonStyle: {
     justifyContent: 'center',

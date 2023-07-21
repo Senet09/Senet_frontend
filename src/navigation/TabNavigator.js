@@ -6,16 +6,53 @@ const Tab = createBottomTabNavigator();
 import PostUpload from '../components/PostUpload';
 import PostUploadText from '../components/PostUploadText';
 import Feed from '../screens/FeedScreen';
-import CommunityList from '../components/CommunityList';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import ProfileScreen from '../screens/ProfileScreen';
-import StackNavigator from './StackNavigator';
-import DrawerNavigator from './DrawerNavigator';
 import SettingsScreen from '../screens/SettingsScreen';
 import Notification from '../components/Notification';
 import TrendingTopic from '../screens/TrendingTopic';
+import SplashScreen from '../screens/SplashScreen.js';
+import LoginScreen from '../screens/LoginScreen.js';
+import RegisterScreen from '../screens/RegisterScreen.js';
+import HomeScreen from '../components/HomeScreen.js';
+import FeedScreen from '../screens/FeedScreen.js';
+import ProfileScreen from '../screens/ProfileScreen.js';
+import PasswordChangeScreen from '../components/PasswordChange.js';
+import Gpt3Page from '../components/GptScreen.js';
+import ProfileInfoUpdate from '../components/ProfileInfoUpdate.js';
+import ChatScreen from '../screens/ChatScreen.js';
+import MessagesScreen from '../screens/MessageScreen.js';
+
 //import ProfileSc from '../components/ProfileSc';
 //import ProfilePicUpdate from './src/components/ProfilePicUpdate';
+
+// const Auth = () => {
+//   // Stack Navigator for Login and Sign up Screen
+//   return (
+//     <Stack.Navigator initialRouteName="LoginScreen">
+//       <Stack.Screen
+//         name="LoginScreen"
+//         component={LoginScreen}
+//         options={{headerShown: false}}
+//       />
+//       <Stack.Screen
+//         name="RegisterScreen"
+//         component={RegisterScreen}
+//         options={{
+//           title: 'Register', //Set Header Title
+//           headerStyle: {
+//             backgroundColor: '#307ecc', //Set Header color
+//           },
+//           headerTintColor: '#fff', //Set Header text color
+//           headerTitleStyle: {
+//             fontWeight: 'bold', //Set Header text style
+//           },
+//         }}
+//       />
+//     </Stack.Navigator>
+//   );
+// };
+
+
 const TabNavigator = () => {
   return (
     <Tab.Navigator
@@ -58,12 +95,17 @@ const TabNavigator = () => {
         sifting: true,
         swipeEnabled: true,
       })}>
-      <Tab.Screen name="Feed" component={Feed} />
+      <Tab.Screen
+        name="Feed"
+        //options={{headerShown: false}}
+        component={FeedScreen}
+      />
       <Tab.Screen
         name="Trending"
         //options={{headerShown: false}}
         component={TrendingTopic}
       />
+      
       <Tab.Screen
         name="PostUploadText"
         //options={{headerShown: false}}
@@ -79,7 +121,9 @@ const TabNavigator = () => {
         name="ProfileScreen"
         //options={{headerShown: false}}
         component={ProfileScreen}
+
       />
+   
       {/* <Tab.Screen name="DraweNavigator" component={DrawerNavigator} /> */}
       {/* <Tab.Screen name="ProfilePicUpdate" component={ProfilePicUpdate} /> */}
     </Tab.Navigator>
