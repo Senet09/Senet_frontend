@@ -18,6 +18,7 @@ export const FontFamily = {
     textPlaceholder: "#747980",
     textPrimary: "#312e49",
     whitesmoke: "#f5f6f7",
+    black: "#000",
   };
   /* Paddings */
   export const Padding = {

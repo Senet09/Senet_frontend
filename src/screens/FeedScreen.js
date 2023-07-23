@@ -1526,7 +1526,7 @@ const Feed = ({ navigation }) => {
         <Text
           {...props}
           style={{
-            color: 'white',
+            color: 'black',
             fontSize: 20,
             fontFamily: 'layfairDisplay-SemiBold',
             fontWeight: 'bold',
@@ -1535,13 +1535,13 @@ const Feed = ({ navigation }) => {
         </Text>
       ),
       headerStyle: {
-        backgroundColor: '#1A5DB4', //Set Header color
+        backgroundColor: '#ffffff', //Set Header color
       },
       headerRight: () => (
         <Ionicons
           name="chatbox-outline"
           size={30}
-          color="white"
+          color="black"
           style={{ marginRight: 10 }}
           onPress={() => navigation.navigate('MessagesScreen')}
         />
@@ -1702,9 +1702,11 @@ const styles = {
     flex: 1,
     paddingHorizontal: 16,
     paddingTop: 16,
+    backgroundColor: '#ffffff',
   },
   feedItem: {
     marginBottom: 12,
+    backgroundColor: '#ffffff',
   },
   border: {
     borderWidth: 1,

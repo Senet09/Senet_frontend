@@ -124,7 +124,7 @@ const StackNavigator = () => {
         name="MessagesScreen"
         component={MessagesScreen}
         // Hiding header for Navigation Drawer
-        options={{headerShown: false}}
+        options={{headerShown: true}}
       />
       <Stack.Screen
         name="SettingsScreen"
