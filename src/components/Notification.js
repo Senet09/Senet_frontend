@@ -8,7 +8,7 @@ const DATA = [
     name: 'John Doe',
     postTitle: 'President',
     imageURI: 'https://images.wsj.net/im-587905/?width=860&size=1.5',
-    randomText: 'I have uploaded my firsjjjjjjjjjjjjjjjjjjjjjjjjjjtnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn vvvvvvvvvvvvvvvvvvvvvvvvcontent on senet',
+    randomText: 'I have uploaded my first post',
     buttonActive: '!active',
     reactions: 123,
     TrendingRank: 1,
